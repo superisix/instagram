@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="instagram.css">
+    <title>Document</title>
+</head>
+
+<body style="background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); font-family:Arial, Helvetica, sans-serif ;" id="insta">
+    <div class="container">
+        <div class="header-instagram" id="yazi">
+          <div class="box" style=" max-width: 350px; background-color: #fff; padding: 40px; ">
+        
+        <form id="instagramgiris">
+          <h2 style="margin-bottom: 20px; text-align: center;">Instagram Oturum Aç</h2>
+          <label for="username" style="display: block; margin-right: 5px; font-weight: bold;">Kullanıcı Adı:</label>
+          <input type="text" id="username" placeholder="Kullanıcı adınızı girin"  style="padding:10px;width: 100%; margin-bottom: 20px; border: 1px solid #ddd;">
+          
+          <label for="password" style="display: block; margin-bottom: 10px; font-weight: bold;">Şifre:</label>
+          <input type="password" id="password" placeholder="Şifrenizi girin" style="padding:10px; width: 100%; margin-bottom: 20px; border: 1px solid #ddd;">
+          
+          <button type="submit" id="oturumac" >Oturum Aç</button>
+          <p style="text-align: center;"><a href="https://www.instagram.com/accounts/password/reset/">Şifremi unuttum</a></p>
+          <p style="text-align: center;">Hesabınız yok mu? <a href="#" id="kayit">Kaydolun</a></p>
+        </form>
+        
+        
+        <div class="header_kayitol" id="kayitol" style="display:none">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="ul" style="list-style: none;">
+                <li>       
+                     <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label" style="display: flex;">İSİM</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                    
+                  </div>
+                </li>
+                <li>
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label" style="display: flex;">SOYİSİM</label>
+                        <input type="text" class="form-control" id="validationCustom02"  required>
+                        
+                      </div>
+                </li>
+                <li>
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label" style="display: flex;">MAİL</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="example@example.com" required>
+                        
+                      </div>
+                </li>
+                <li>
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label" style="display: flex;">KULLANICI İSMİ</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend"></span>
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                         
+                        </div>
+                      </div>
+                </li>
+                <li>
+                    <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label" style="display: flex;">ŞEHİR</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                       
+                      </div>
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>
+                <li>
+                  <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label" style="display: flex;">ÜLKE</label>
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">Seçiniz...</option>
+                      <option>Türkiye</option>
+                      <option>Almanya</option>
+                      <option>İngiltere</option>
+                      <option>Fransa</option>
+                      <option>İtalya</option>
+                      <option>İspanya</option>
+                    </select>
+                    
+                  </div>
+                    
+                <div class="col-12">
+                    <div class="form-check">
+                      <label class="form-check-label" for="invalidCheck">
+                        <p><a href="http://help.instagram.com/581066165581870">  Kullanıcı sözleşmesini okumak için tıklayınız.</a></p>
+                      </label>
+                     
+                    </div>
+                  </div>
+                </li>
+            </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" id="kaydet">KAYIT OL</button>
+                </div>
+              </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hosgeldin" style="display: none;" id="girisicin">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h2 style="display: flex; justify-content: center; margin-top: 25%;">HOŞGELDİN</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="hatali" style="display: none;" id="hataligiris">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h2 style="display: flex; justify-content: center; margin-top: 25%;">KULLANICI ADI VEYA ŞİFRE HATALI</h2>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="instagram.js"></script>
+</body>
+</html>
